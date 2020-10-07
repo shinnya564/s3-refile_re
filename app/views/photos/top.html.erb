@@ -1,0 +1,6 @@
+
+<%= link_to("New", new_photo_path, class: "glyphicon glyphicon-home", data: {"turbolinks" => false}) %>
+<br>
+    <% @photos.each do |f| %>
+	    <%= attachment_image_tag f, :image, fallback: "no_image.jpg",size: "200x200" %><br>
+    <% end %>
